@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
+.container {
     background-color: #262626;
     display: flex;
     justify-content: space-between;
@@ -43,6 +43,18 @@ li {
     justify-content: space-between;
 }
 
+.register {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.register:hover {
+    color: dodgerblue;
+    border-bottom: 2px solid dodgerblue;
+}
+
+
 .navList li {
     padding: 0 1em;
 }
@@ -70,6 +82,41 @@ li {
     transition: all .3s ease-in-out;
     background-color: white;
 }
+
+.profileArea i {
+    font-size: 22px;
+    color: white;
+}
+
+.profileArea i:hover {
+    color: dodgerblue;
+}
+
+.profileList {
+    display: flex;
+    position: fixed;
+    right: -100%;
+    background-color: #262626;
+    text-align: center;
+    padding: 1em 0;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+.profileList li {
+    padding: .75em;
+}
+
+.profileList.active {
+    right: 0;
+    background-color: #2F2F2F;
+}
+
+.iconProfile.active {
+    position: relative;
+    right: 7em;
+}
+
 
 @media (max-width: 768px) {
 
@@ -116,5 +163,9 @@ li {
 
     .menuBar.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .iconProfile.active {
+        right: 0;
     }
 }
